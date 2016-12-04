@@ -61,7 +61,7 @@ html, body {
 
 @media (max-width: 768px) {
   .App {
-
+    padding-left: 50px;
   }
 
   .App-sidebar {
@@ -91,5 +91,9 @@ html, body {
 
   .App-sidebar.expanded .App-sidebar-content {
     display: block;
+  }
+
+  .App-main {
+    padding: 1em;
   }
 }
