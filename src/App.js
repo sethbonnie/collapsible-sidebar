@@ -25,9 +25,9 @@ class App extends Component {
         <Sidebar toggleMenu={this.toggleMenu} expanded={expanded}>
           <img src={logo} className="App-logo" alt="logo" />
           <ul>
-            <li>Navigation Item 1</li>
-            <li>Navigation Item 2</li>
-            <li>Navigation Item 3</li>
+            <li onClick={this.toggleMenu}>Navigation Item 1</li>
+            <li onClick={this.toggleMenu}>Navigation Item 2</li>
+            <li onClick={this.toggleMenu}>Navigation Item 3</li>
           </ul>
         </Sidebar>
         <Main />
