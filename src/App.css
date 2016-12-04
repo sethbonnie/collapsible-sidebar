@@ -1,24 +1,75 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+
 .App {
-  text-align: center;
+  min-width: 360px;
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  padding-left: 25vw;
+}
+
+.App-sidebar {
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  width: 25vw;
+  height: 100%;
+  border-right: 1px solid #ddd;
+}
+
+.App-sidebar-controls {
+  display: none;
+  width: 0;
+}
+
+.App-sidebar-content {
+
+}
+
+.App-main {
+  overflow-y: auto;
+  padding: 1em 2em;
+  width: 100%;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  display: block;
+  animation: App-logo-spin infinite 5s linear;
   height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
+  margin: 0 auto;
 }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@media (min-width: 640px) {
+  .App {
+
+  }
+
+  .App-sidebar {
+
+  }
+
+  .App-sidebar.collapsed {
+
+  }
+
+  .App-sidebar.expanded {
+
+  }
+
+  .App-sidebar-controls {
+
+  }
+
+  .App-sidebar-content {
+
+  }
 }
