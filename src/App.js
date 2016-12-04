@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Sidebar from './Sidebar';
 import Main from './Main';
+import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -21,8 +22,14 @@ class App extends Component {
     const {expanded} = this.state;
     return (
       <div className="App">
-        <Sidebar toggleMenu={this.toggleMenu}
-          expanded={expanded} />
+        <Sidebar toggleMenu={this.toggleMenu} expanded={expanded}>
+          <img src={logo} className="App-logo" alt="logo" />
+          <ul>
+            <li>Navigation Item 1</li>
+            <li>Navigation Item 2</li>
+            <li>Navigation Item 3</li>
+          </ul>
+        </Sidebar>
         <Main />
       </div>
     );
