@@ -19,18 +19,20 @@ html, body {
   width: 25vw;
   height: 100%;
   border-right: 1px solid #ddd;
+  background-color: #efefef;
 }
 
 .App-sidebar-controls {
   display: none;
   width: 0;
+  background-color: #eaeaea;
+  border-left: 1px solid #e5e5e5;
 }
 
 .App-sidebar-content {
   width: 100%;
   height: 100%;
   margin: 0px;
-  background-color: #efefef;
 }
 
 .App-main {
@@ -46,6 +48,12 @@ html, body {
   margin: 0 auto;
 }
 
+.App-sidebar-menu-icon {
+  margin-top: 8px;
+  color: #333;
+  cursor: pointer;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -57,22 +65,31 @@ html, body {
   }
 
   .App-sidebar {
-
-  }
-
-  .App-sidebar.collapsed {
-
-  }
-
-  .App-sidebar.expanded {
-
+    padding-right: 50px;
   }
 
   .App-sidebar-controls {
-
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    text-align: center;
   }
 
-  .App-sidebar-content {
+  .App-sidebar.collapsed {
+    width: 50px;
+  }
 
+  .App-sidebar.expanded {
+    min-width: 300px;
+  }
+
+  .App-sidebar.collapsed .App-sidebar-content {
+    display: none;
+  }
+
+  .App-sidebar.expanded .App-sidebar-content {
+    display: block;
   }
 }
