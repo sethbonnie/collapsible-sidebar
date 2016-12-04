@@ -27,7 +27,10 @@ html, body {
 }
 
 .App-sidebar-content {
-
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  background-color: #efefef;
 }
 
 .App-main {
@@ -48,7 +51,7 @@ html, body {
   to { transform: rotate(360deg); }
 }
 
-@media (min-width: 640px) {
+@media (max-width: 768px) {
   .App {
 
   }
