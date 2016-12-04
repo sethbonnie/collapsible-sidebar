@@ -3,29 +3,16 @@ import classnames from 'classnames';
 import logo from './logo.svg';
 
 class Sidebar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      expand: false
-    }
-    this.toggleMenu = this.toggleMenu.bind(this)
-  }
-
-  toggleMenu() {
-    const expand = !this.state.expand;
-    this.setState({expand});
-  }
-
   render() {
-    const {expand} = this.state;
+    const {expanded} = this.props;
     return (
       <div className={classnames("App-sidebar", {
-        expanded: expand,
-        collapsed: !expand
+        expanded: expanded,
+        collapsed: !expanded
       })}>
         <div className="App-sidebar-controls">
           <i className="fa fa-bars fa-2x App-sidebar-menu-icon"
-             onClick={this.toggleMenu}/>
+             onClick={this.props.toggleMenu}/>
         </div>
         <div className="App-sidebar-content">
           <img src={logo} className="App-logo" alt="logo" />
